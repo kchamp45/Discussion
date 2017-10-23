@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.guest.discussion.MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/background"
+            android:scaleType="centerCrop"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/appNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to our discussion forum.  Please enter your post."
+            android:textColor="@color/colorTextIcons"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/categoryEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Category"
+            android:padding="5dp"
+            android:background="@color/colorTextIcons"
+            android:layout_below="@+id/appNameTextView"
+            android:layout_alignLeft="@+id/subjectEditText"
+            android:layout_alignStart="@+id/subjectEditText"
+            android:layout_marginTop="18dp" />
+
+        <EditText
+            android:id="@+id/subjectEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Subject"
+            android:padding="5dp"
+            android:background="@color/colorTextIcons"
+            android:layout_below="@+id/categoryEditText"
+            android:layout_alignLeft="@+id/messageEditText"
+            android:layout_alignStart="@+id/messageEditText"
+            android:layout_marginTop="21dp" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Title"
+        android:padding="5dp"
+        android:background="@color/colorTextIcons"
+        android:layout_below="@+id/subjectEditText"
+        android:layout_alignLeft="@+id/messageEditText"
+        android:layout_alignStart="@+id/messageEditText"
+        android:layout_marginTop="21dp" />
+
+    <EditText
+        android:id="@+id/messageEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Your message"
+        android:padding="5dp"
+        android:background="@color/colorTextIcons"
+        android:layout_below="@+id/titleEditText"
+        android:layout_alignLeft="@+id/dateEditText"
+        android:layout_alignStart="@+id/dateEditText"
+        android:layout_marginTop="48dp" />
+
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Date"
+        android:padding="5dp"
+        android:background="@color/colorTextIcons"
+        android:layout_above="@+id/addPostButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+        <Button
+            android:id="@+id/addPostButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Post"
+            android:textColor="@color/colorTextIcons"
+            android:background="@color/colorAccent"
+            android:visibility="visible"
+            android:layout_marginBottom="31dp"
+            android:layout_above="@+id/savedPostsButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saved Posts"
+            android:id="@+id/savedPostsButton"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorTextIcons"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+</RelativeLayout>
