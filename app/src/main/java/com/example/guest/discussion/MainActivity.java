@@ -2,12 +2,15 @@ package com.example.guest.discussion;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.guest.discussion.models.Post;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -46,12 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String userMessage = mMessageEditText.getText().toString();
                 String userDate = mDateEditText.getText().toString();
 
+                Post post = new Post(userCategory, userSubject, userTitle, userMessage, userDate);
+
                 Intent intent = new Intent(MainActivity.this, PostDetailActivity.class);
-                intent.putExtra("category", userCategory);
-                intent.putExtra("subject", userSubject);
-                intent.putExtra("title", userTitle);
-                intent.putExtra("message", userMessage);
-                intent.putExtra("date", userDate);
+                intent.putExtra("post", (Parcelable) post);
                 startActivity(intent);
             }
             if (v == mSavedPostsButton) {
@@ -59,6 +60,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         }
-
 
 }

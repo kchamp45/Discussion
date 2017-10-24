@@ -35,7 +35,7 @@ public class PostDetailActivity extends AppCompatActivity implements View.OnClic
 
     private Post mPost;
 
-    //    public static PostDetailActivity newInstance(Post post) {
+//        public static PostDetailActivity newInstance(Post post) {
 //        PostDetailActivity postDetailActivity = new PostDetailActivity();
 //        Bundle args = new Bundle();
 //        args.putParcelable("post", Parcels.wrap(post));
@@ -47,12 +47,7 @@ public class PostDetailActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        String category = intent.getStringExtra("category");
-        String subject = intent.getStringExtra("subject");
-        String title = intent.getStringExtra("title");
-        String message = intent.getStringExtra("message");
-        String date = intent.getStringExtra("date");
-//        mPost = Parcels.unwrap(getArguments().getParcelable("post"));
+        mPost = Parcels.getParcelable("post");
     }
 
     @Override
