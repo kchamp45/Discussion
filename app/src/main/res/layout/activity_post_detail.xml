@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.guest.discussion.PostDetailActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"/>
+
 
     <LinearLayout
         android:layout_width="368dp"
@@ -49,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/postTextView"
+                android:layout_below="@+id/titleTextView"
                 android:text="Category"
                 android:textColor="@android:color/holo_green_dark"
                 android:textStyle="italic" />

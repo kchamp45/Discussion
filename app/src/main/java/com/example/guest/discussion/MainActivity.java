@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.example.guest.discussion.models.Post;
 
+import org.parceler.Parcels;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -51,8 +53,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Post post = new Post(userCategory, userSubject, userTitle, userMessage, userDate);
 
+                Bundle args = new Bundle();
+                args.putParcelable("post", Parcels.wrap(post));
                 Intent intent = new Intent(MainActivity.this, PostDetailActivity.class);
-                intent.putExtra("post", (Parcelable) post);
+                intent.putExtra("post", args);
                 startActivity(intent);
             }
             if (v == mSavedPostsButton) {
