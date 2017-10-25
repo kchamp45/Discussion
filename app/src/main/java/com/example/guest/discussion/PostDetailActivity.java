@@ -44,14 +44,15 @@ public class PostDetailActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_post_detail);
         ButterKnife.bind(this);
         mPost = Parcels.unwrap(getIntent().getParcelableExtra("post"));
 
-//        mTitleLabel.setText(mPost.getTitle());
-//        mCategoryLabel.setText(mPost.getCategory());
-//        mSubjectLabel.setText(mPost.getSubject());
-//        mMessageLabel.setText(mPost.getMessage());
-//        mDateLabel.setText(mPost.getDate());
+        mTitleLabel.setText(mPost.getTitle());
+        mCategoryLabel.setText(mPost.getCategory());
+        mSubjectLabel.setText(mPost.getSubject());
+        mMessageLabel.setText(mPost.getMessage());
+        mDateLabel.setText(mPost.getDate());
 
         mSavePostButton.setOnClickListener(this);
 
@@ -60,10 +61,10 @@ public class PostDetailActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
     if (v == mSavePostButton) {
-        DatabaseReference restaurantRef = FirebaseDatabase
+        DatabaseReference discussionRef = FirebaseDatabase
                 .getInstance()
                 .getReference(Constants.FIREBASE_CHILD_POSTS);
-        restaurantRef.push().setValue(mPost);
+        discussionRef.push().setValue(mPost);
     }
 }
 

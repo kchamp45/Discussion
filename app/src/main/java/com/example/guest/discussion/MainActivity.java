@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Bundle args = new Bundle();
                 args.putParcelable("post", Parcels.wrap(post));
                 Intent intent = new Intent(MainActivity.this, PostDetailActivity.class);
-                intent.putExtra("post", args);
+                intent.putExtras(args);
                 startActivity(intent);
             }
             if (v == mSavedPostsButton) {

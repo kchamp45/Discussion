@@ -7,11 +7,11 @@ import java.util.List;
 
 @Parcel
 public class Post {
-    private String message;
-    private String category;
-    private String subject;
-    private String title;
-    private String date;
+    public String message;
+    public String category;
+    public String subject;
+    public String title;
+    public String date;
 
 public Post(){
 }
